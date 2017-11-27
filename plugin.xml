@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cCS -->
+      <package
+            uri="http://www.example.org/cCS"
+            class="cCS.CCSPackage"
+            genModel="model/cCS.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cCS -->
+      <package
+            uri="http://www.example.org/cCS/Component"
+            class="cCS.Component.ComponentPackage"
+            genModel="model/cCS.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cCS -->
+      <package
+            uri="http://www.example.org/cCS/Configuration"
+            class="cCS.Configuration.ConfigurationPackage"
+            genModel="model/cCS.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cCS -->
+      <package
+            uri="http://www.example.org/cCS/Connector"
+            class="cCS.Connector.ConnectorPackage"
+            genModel="model/cCS.genmodel"/>
+   </extension>
+
+</plugin>
