@@ -5,7 +5,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="portclient" upperBound="-1"
         eType="#//PortClient" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RPC" instanceClassName="Connector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RPC" instanceClassName="Connector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpc" upperBound="-1"
+        eType="#//RoleRPC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gluerpc" upperBound="-1"
+        eType="#//GlueRPC" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Serveur" instanceClassName="Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="System" instanceTypeName="Config">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rpc" upperBound="-1" eType="#//RPC"
@@ -19,15 +24,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="PortClientRequis" eSuperTypes="#//PortClient"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortclientFourni" eSuperTypes="#//PortClient"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleRPC"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCFourni" eSuperTypes="#//RoleRPC"/>
   <eClassifiers xsi:type="ecore:EClass" name="GlueRPC"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCRequis" eSuperTypes="#//RoleRPC"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServerConf" instanceClassName="Configuration"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortConf"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PortConfFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PortConfRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConfFourni" eSuperTypes="#//PortConf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConfRequis" eSuperTypes="#//PortConf"/>
   <eClassifiers xsi:type="ecore:EClass" name="Lien"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BindingRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingRequis" eSuperTypes="#//Binding"/>
   <eClassifiers xsi:type="ecore:EClass" name="Binding"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BindingFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingFourni" eSuperTypes="#//Binding"/>
 </ecore:EPackage>
