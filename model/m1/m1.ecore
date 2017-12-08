@@ -32,7 +32,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="PortclientFourni" eSuperTypes="#//PortClient"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleRPC"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleRPCFourni" eSuperTypes="#//RoleRPC"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GlueRPC"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueRPC">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpcrequis" eType="#//RoleRPCRequis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpcfourni" eType="#//RoleRPCFourni"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoleRPCRequis" eSuperTypes="#//RoleRPC"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServerConf" instanceClassName="Configuration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portconf" upperBound="-1"
