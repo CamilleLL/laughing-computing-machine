@@ -13,6 +13,7 @@ import fr.univ.nantes.asa.m2.composant.PortComposantFournis;
 import fr.univ.nantes.asa.m2.composant.PortComposantRequis;
 import fr.univ.nantes.asa.m2.configuration.Attachement;
 import fr.univ.nantes.asa.m2.configuration.Configuration;
+import fr.univ.nantes.asa.m2.connecteur.Connecteur;
 import fr.univ.nantes.asa.m2.connecteur.RoleFournis;
 import fr.univ.nantes.asa.m2.connecteur.RoleRequis;
 
@@ -28,9 +29,7 @@ public class System extends Configuration{
 	
 	public System() {
 		this.composants = new ArrayList<Composant>();
-		this.composants.add(client);
-		this.composants.add(serveur);
-		
+		this.connecteurs = new ArrayList<Connecteur>();
 		//le serveur fait un appel
 		// étape 1 : serveur.portFournis -> rpc.serveur.roleRequis
 		// étape 2 : rpc.serveur.roleFournis -> client.portRequis 
@@ -54,6 +53,10 @@ public class System extends Configuration{
 		RoleFournis roleClientF =  rpc.getInterfaceClient().roleFournis;
 		this.attachements.add(new Attachement(portServeurR,roleClientF));
 		
-		
+		this.composants.add(client);
+		this.composants.add(serveur);
+		this.connecteurs.add(rpc);
+		client.setConfiguration(this);
+		serveur.setConfiguration(this);
 	}
 }

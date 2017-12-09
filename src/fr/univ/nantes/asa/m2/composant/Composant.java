@@ -7,6 +7,7 @@ package fr.univ.nantes.asa.m2.composant;
 import java.util.List;
 
 import fr.univ.nantes.asa.m2.IArchitecturalElement;
+import fr.univ.nantes.asa.m2.configuration.Configuration;
 
 /**
  * @author francois
@@ -14,6 +15,7 @@ import fr.univ.nantes.asa.m2.IArchitecturalElement;
  */
 public abstract class Composant implements IArchitecturalElement{
 	
+	protected Configuration configuration;
 	protected List<Propriete> proprietes;
 	protected List<InterfaceComposant> interfaces;
 	protected List<Contrainte> contraintes;
@@ -27,5 +29,8 @@ public abstract class Composant implements IArchitecturalElement{
 		super();
 	}
 
+	public void setConfiguration(Configuration c) {
+		configuration = c;
+	}
 	
 }
