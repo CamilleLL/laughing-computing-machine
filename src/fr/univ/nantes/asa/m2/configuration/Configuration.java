@@ -15,9 +15,9 @@ import fr.univ.nantes.asa.m2.connecteur.Connecteur;
  */
 public abstract class Configuration implements IArchitecturalElement{
 	
-	Collection<Composant> composants;
-	Collection<Connecteur> connecteurs;
-	Collection<Attachement> attachements;
-	Collection<Binding> bindings;
-	Collection<InterfaceConfiguration> interfaces;
+	protected Collection<Composant> composants;
+	protected Collection<Connecteur> connecteurs;
+	protected Collection<Attachement> attachements;
+	protected Collection<Binding> bindings;
+	protected Collection<InterfaceConfiguration> interfaces;
 }

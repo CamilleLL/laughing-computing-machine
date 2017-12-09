@@ -3,7 +3,7 @@
  */
 package fr.univ.nantes.asa.m2.connecteur;
 
-import java.util.Collection;
+import java.util.List;
 
 import fr.univ.nantes.asa.m2.IArchitecturalElement;
 
@@ -14,6 +14,6 @@ import fr.univ.nantes.asa.m2.IArchitecturalElement;
 public abstract class Connecteur implements IArchitecturalElement{
 
 
-	Collection<InterfaceConnecteur> interfaces;
-	Collection<Glue> glues;
+	protected List<InterfaceConnecteur> interfaces;
+	protected List<Glue> glues;
 }

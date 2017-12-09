@@ -21,12 +21,8 @@ public abstract class Composant implements IArchitecturalElement{
 	 * @param interfaces
 	 * @param contraintes
 	 */
-	public Composant(Collection<Propriete> proprietes, Collection<InterfaceComposant> interfaces,
-			Collection<Contrainte> contraintes) {
+	public Composant() {
 		super();
-		this.proprietes = proprietes;
-		this.interfaces = interfaces;
-		this.contraintes = contraintes;
 	}
 
 	
