@@ -5,6 +5,8 @@ package fr.univ.nantes.asa.m1.clientserveur;
 
 import java.util.ArrayList;
 
+import fr.univ.nantes.asa.m1.clientserveur.composant.ComposantClient;
+import fr.univ.nantes.asa.m1.clientserveur.composant.ComposantServeur;
 import fr.univ.nantes.asa.m1.clientserveur.connecteur.RPC;
 import fr.univ.nantes.asa.m2.composant.Composant;
 import fr.univ.nantes.asa.m2.configuration.Configuration;

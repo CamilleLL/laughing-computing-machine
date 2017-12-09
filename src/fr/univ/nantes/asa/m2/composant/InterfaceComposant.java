@@ -3,7 +3,6 @@
  */
 package fr.univ.nantes.asa.m2.composant;
 
-import java.util.Collection;
 
 /**
  * @author francois
@@ -13,27 +12,16 @@ public abstract class InterfaceComposant {
 	
 	Composant composant;
 	
-	Collection<PortComposantRequis> portsRequis;
-	Collection<PortComposantFournis> portsFournis;
-	Collection<ServiceComposantRequis> servicesRequis;
-	Collection<ServiceComposantFournis> servicesFournis;
-	
-	/**
-	 * @param composant
-	 * @param portsRequis
-	 * @param portsFournis
-	 * @param servicesRequis
-	 * @param servicesFournis
-	 */
-	public InterfaceComposant(Composant composant, Collection<PortComposantRequis> portsRequis,
-			Collection<PortComposantFournis> portsFournis, Collection<ServiceComposantRequis> servicesRequis,
-			Collection<ServiceComposantFournis> servicesFournis) {
+	public PortComposantRequis portRequis;
+	public PortComposantFournis portFournis;
+	public ServiceComposantRequis serviceRequis;
+	public ServiceComposantFournis serviceFournis;
+
+	public InterfaceComposant(Composant c,PortComposantRequis p1,PortComposantFournis p2) {
 		super();
-		this.composant = composant;
-		this.portsRequis = portsRequis;
-		this.portsFournis = portsFournis;
-		this.servicesRequis = servicesRequis;
-		this.servicesFournis = servicesFournis;
+		portRequis = p1;
+		portFournis = p2;
+		composant = c;
 	}
 	
 	

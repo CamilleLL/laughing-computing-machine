@@ -3,7 +3,9 @@
  */
 package fr.univ.nantes.asa.m2.composant;
 
-import java.util.Collection;
+
+import java.util.List;
+
 import fr.univ.nantes.asa.m2.IArchitecturalElement;
 
 /**
@@ -12,9 +14,9 @@ import fr.univ.nantes.asa.m2.IArchitecturalElement;
  */
 public abstract class Composant implements IArchitecturalElement{
 	
-	Collection<Propriete> proprietes;
-	Collection<InterfaceComposant> interfaces;
-	Collection<Contrainte> contraintes;
+	protected List<Propriete> proprietes;
+	protected List<InterfaceComposant> interfaces;
+	protected List<Contrainte> contraintes;
 	
 	/**
 	 * @param proprietes
