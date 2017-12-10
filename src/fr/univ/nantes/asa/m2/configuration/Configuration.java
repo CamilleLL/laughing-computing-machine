@@ -23,10 +23,10 @@ public abstract class Configuration implements IArchitecturalElement{
 	protected Collection<InterfaceConfiguration> interfaces;
 	
 	public void envoyer(Object o) {
-		
+		//TODO stuff with glue
 	}
 	
 	public void recevoir(Object o) {
-		
+		//TODO stuff with glue
 	}
 }
