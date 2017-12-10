@@ -17,14 +17,7 @@ import fr.univ.nantes.asa.m2.composant.PortComposantRequis;
 public class SecurityManager extends Composant {
 	public SecurityManager() {
 		this.interfaces = new ArrayList<InterfaceComposant>();
-		this.interfaces.add(new ISecurityManager(this,new PortComposantRequis(), new PortComposantFournis()));
+		this.interfaces.add(new ISecurityManager(this));
 	}
 	
-	public PortComposantRequis getPortRequis() {
-		return this.interfaces.get(0).portRequis;
-	}
-
-	public PortComposantFournis getPortFournis() {
-		return this.interfaces.get(0).portFournis;
-	}
 }

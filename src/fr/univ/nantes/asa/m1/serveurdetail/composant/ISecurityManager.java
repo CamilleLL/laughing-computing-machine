@@ -14,8 +14,8 @@ import fr.univ.nantes.asa.m2.composant.PortComposantRequis;
  */
 public class ISecurityManager extends InterfaceComposant {
 
-	public ISecurityManager(Composant c, PortComposantRequis p1, PortComposantFournis p2) {
-		super(c, p1, p2);
+	public ISecurityManager(Composant c) {
+		super(c);
 	}
 
 }

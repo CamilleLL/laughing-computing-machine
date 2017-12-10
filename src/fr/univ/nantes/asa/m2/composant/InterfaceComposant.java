@@ -3,6 +3,8 @@
  */
 package fr.univ.nantes.asa.m2.composant;
 
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author francois
@@ -12,15 +14,20 @@ public abstract class InterfaceComposant {
 	
 	Composant composant;
 	
-	public PortComposantRequis portRequis;
-	public PortComposantFournis portFournis;
+	public List<PortComposantRequis> portRequis = new ArrayList<PortComposantRequis>();
+	public List<PortComposantFournis> portFournis = new ArrayList<PortComposantFournis>();
 	public ServiceComposantRequis serviceRequis;
 	public ServiceComposantFournis serviceFournis;
 
 	public InterfaceComposant(Composant c,PortComposantRequis p1,PortComposantFournis p2) {
 		super();
-		portRequis = p1;
-		portFournis = p2;
+		portRequis.add(p1);
+		portFournis.add(p2);
+		composant = c;
+	}
+	
+	public InterfaceComposant(Composant c) {
+		super();
 		composant = c;
 	}
 	

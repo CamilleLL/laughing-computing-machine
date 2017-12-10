@@ -14,8 +14,8 @@ import fr.univ.nantes.asa.m2.composant.PortComposantRequis;
  */
 public class IDatabase extends InterfaceComposant {
 
-	public IDatabase(Composant c, PortComposantRequis p1, PortComposantFournis p2) {
-		super(c, p1, p2);
+	public IDatabase(Composant c) {
+		super(c);
 	}
 
 }

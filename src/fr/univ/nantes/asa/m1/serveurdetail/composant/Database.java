@@ -17,14 +17,7 @@ import fr.univ.nantes.asa.m2.composant.PortComposantRequis;
 public class Database extends Composant {
 	public Database() {
 		this.interfaces = new ArrayList<InterfaceComposant>();
-		this.interfaces.add(new IDatabase(this,new PortComposantRequis(), new PortComposantFournis()));
-	}
-	
-	public PortComposantRequis getPortRequis() {
-		return this.interfaces.get(0).portRequis;
+		this.interfaces.add(new IDatabase(this));
 	}
 
-	public PortComposantFournis getPortFournis() {
-		return this.interfaces.get(0).portFournis;
-	}
 }

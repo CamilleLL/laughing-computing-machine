@@ -23,10 +23,10 @@ public class ComposantServeur extends Composant{
 	}
 	
 	public PortComposantRequis getPortRequis() {
-		return this.interfaces.get(0).portRequis;
+		return this.interfaces.get(0).portRequis.get(0);
 	}
 
 	public PortComposantFournis getPortFournis() {
-		return this.interfaces.get(0).portFournis;
+		return this.interfaces.get(0).portFournis.get(0);
 	}
 }
