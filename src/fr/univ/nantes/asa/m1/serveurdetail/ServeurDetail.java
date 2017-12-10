@@ -106,5 +106,9 @@ public class ServeurDetail extends Configuration {
 		PortComposantRequis portCoDbR = cm.getInterface().getPortRequisPourDB();
 		RoleFournis roleDbCoF = conCxDb.getInterfaceDatabase().roleFournis;
 		this.attachements.add(new Attachement(portCoDbR,roleDbCoF));
+		
+		cm.setConfiguration(this);
+		sm.setConfiguration(this);
+		db.setConfiguration(this);
 	}
 }
