@@ -68,6 +68,14 @@ public class ServeurDetail extends Configuration {
 		
 		
 		//sec vers db
+		//port fournis security vers role requis security
+		PortComposantFournis portSecDbF = sm.getInterface().getPortFournisPourDB();
+		RoleRequis roleSecDbR =  conSecDb.getInterfaceSecurity().rolesRequis;
+		this.attachements.add(new Attachement(portSecDbF,roleSecDbR));
+		//role fournis security vers port requis db
+		PortComposantRequis portDbSecR = db.getInterface().getPortRequisPourSec();
+		RoleFournis roleSecDbF = conSecDb.getInterfaceSecurity().roleFournis;
+		this.attachements.add(new Attachement(portDbSecR,roleSecDbF));
 		
 		//sec vers connexion
 
