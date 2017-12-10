@@ -16,6 +16,28 @@ public class ISecurityManager extends InterfaceComposant {
 
 	public ISecurityManager(Composant c) {
 		super(c);
+		//port vers Database
+		this.portFournis.add(new PortComposantFournis());
+		this.portRequis.add(new PortComposantRequis());
+		//port vers Connexion
+		this.portFournis.add(new PortComposantFournis());
+		this.portRequis.add(new PortComposantRequis());
+	}
+	
+	public PortComposantRequis getPortRequisPourDB() {
+		return this.portRequis.get(0);
+	}
+	
+	public PortComposantFournis getPortFournisPourDB() {
+		return this.portFournis.get(0);
+	}
+	
+	public PortComposantRequis getPortRequisPourCx() {
+		return this.portRequis.get(1);
+	}
+	
+	public PortComposantFournis getPortFournisPourCx() {
+		return this.portFournis.get(1);
 	}
 
 }
