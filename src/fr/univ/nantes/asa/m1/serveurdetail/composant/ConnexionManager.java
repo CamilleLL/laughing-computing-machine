@@ -20,5 +20,8 @@ public class ConnexionManager extends Composant {
 		this.interfaces.add(new IConnexionManager(this));
 	}
 	
+	public IConnexionManager getInterface() {
+		return (IConnexionManager)this.interfaces.get(0);
+	}
 
 }

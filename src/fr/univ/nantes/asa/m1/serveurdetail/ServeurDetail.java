@@ -11,8 +11,13 @@ import fr.univ.nantes.asa.m1.serveurdetail.connecteur.ConnecteurConnexionDatabas
 import fr.univ.nantes.asa.m1.serveurdetail.connecteur.ConnecteurConnexionSecurity;
 import fr.univ.nantes.asa.m1.serveurdetail.connecteur.ConnecteurSecurityDatabase;
 import fr.univ.nantes.asa.m2.composant.Composant;
+import fr.univ.nantes.asa.m2.composant.PortComposantFournis;
+import fr.univ.nantes.asa.m2.composant.PortComposantRequis;
+import fr.univ.nantes.asa.m2.configuration.Attachement;
 import fr.univ.nantes.asa.m2.configuration.Configuration;
 import fr.univ.nantes.asa.m2.connecteur.Connecteur;
+import fr.univ.nantes.asa.m2.connecteur.RoleFournis;
+import fr.univ.nantes.asa.m2.connecteur.RoleRequis;
 
 /**
  * @author francois
@@ -40,5 +45,23 @@ public class ServeurDetail extends Configuration {
 		this.connecteurs.add(conCxSec);
 		this.connecteurs.add(conSecDb);
 		this.connecteurs.add(conCxDb);
+		
+		//connexion vers db
+		//port fournis connexion vers role requis connexion
+		PortComposantFournis portCoDbF = cm.getInterface().getPortFournisPourDB();
+		RoleRequis roleCoR =  conCxDb.getInterfaceConnexion().rolesRequis;
+		this.attachements.add(new Attachement(portCoDbF,roleCoR));
+		//role fournis connexion vers port requis db
+		PortComposantRequis portDbCoR = db.getInterface().getPortRequisPourCx();
+		RoleFournis roleCoF = conCxDb.getInterfaceConnexion().roleFournis;
+		this.attachements.add(new Attachement(portDbCoR,roleCoF));
+		
+		//connexion vers sec
+
+		//sec vers db
+		//sec vers connexion
+
+		//db vers sec
+		//db vers connexion
 	}
 }

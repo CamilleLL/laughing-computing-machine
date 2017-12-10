@@ -39,7 +39,7 @@ public class ConnecteurConnexionDatabase extends Connecteur {
 		return this.interfaces.get(0);
 	}
 	
-	public InterfaceConnecteur getInterfaceSecurity() {
+	public InterfaceConnecteur getInterfaceConnexion() {
 		return this.interfaces.get(1);
 	}
 }

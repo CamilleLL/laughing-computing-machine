@@ -20,4 +20,7 @@ public class Database extends Composant {
 		this.interfaces.add(new IDatabase(this));
 	}
 
+	public IDatabase getInterface() {
+		return (IDatabase)this.interfaces.get(0);
+	}
 }
