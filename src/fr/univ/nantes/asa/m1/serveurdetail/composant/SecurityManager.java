@@ -19,5 +19,8 @@ public class SecurityManager extends Composant {
 		this.interfaces = new ArrayList<InterfaceComposant>();
 		this.interfaces.add(new ISecurityManager(this));
 	}
+	public ISecurityManager getInterface() {
+		return (ISecurityManager)this.interfaces.get(0);
+	}
 	
 }
