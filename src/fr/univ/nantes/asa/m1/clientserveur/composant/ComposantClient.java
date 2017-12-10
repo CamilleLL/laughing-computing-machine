@@ -29,4 +29,17 @@ public class ComposantClient extends Composant{
 	public PortComposantFournis getPortFournis() {
 		return this.interfaces.get(0).portFournis.get(0);
 	}
+
+	@Override
+	public void envoyer(Object o) {
+		PortComposantFournis pf = this.getPortFournis();
+		pf.envoyer(o);
+		
+	}
+
+	@Override
+	public void recevoir(Object o) {
+		System.out.println(o.toString());
+		
+	}
 }

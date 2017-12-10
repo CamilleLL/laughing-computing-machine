@@ -32,4 +32,14 @@ public abstract class InterfaceComposant {
 	}
 	
 	
+	public void recevoir(Object o){
+		if(this.composant!=null)
+			this.composant.recevoir(o);
+	}
+	
+	public void envoyer(Object o){
+		if(this.composant!=null)
+			this.composant.envoyer(o);
+	}
+	
 }

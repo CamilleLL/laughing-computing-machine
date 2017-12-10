@@ -19,7 +19,12 @@ public class ComposantServeur extends Composant{
 
 	public ComposantServeur() {
 		this.interfaces = new ArrayList<InterfaceComposant>();
-		this.interfaces.add(new InterfaceServeur(this,new PortComposantRequis(), new PortComposantFournis()));
+		PortComposantRequis pr = new PortComposantRequis();
+		PortComposantFournis pf = new PortComposantFournis();
+		InterfaceServeur is = new InterfaceServeur(this,pr,pf);
+		this.interfaces.add(is);
+		pr.setInterface(is);
+		pf.setInterface(is);
 	}
 	
 	public PortComposantRequis getPortRequis() {
@@ -28,5 +33,17 @@ public class ComposantServeur extends Composant{
 
 	public PortComposantFournis getPortFournis() {
 		return this.interfaces.get(0).portFournis.get(0);
+	}
+
+	@Override
+	public void envoyer(Object o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void recevoir(Object o) {
+		// TODO Auto-generated method stub
+		
 	}
 }

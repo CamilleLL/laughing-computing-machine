@@ -33,4 +33,14 @@ public abstract class Composant implements IArchitecturalElement{
 		configuration = c;
 	}
 	
+	public void envoyer(Object o) {
+		if(this.configuration!=null)
+			this.configuration.envoyer(o);
+	}
+	
+	public void recevoir(Object o) {
+		if(this.configuration!=null)
+			this.configuration.recevoir(o);
+	}
+	
 }

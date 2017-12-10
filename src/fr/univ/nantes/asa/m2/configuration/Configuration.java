@@ -21,4 +21,12 @@ public abstract class Configuration implements IArchitecturalElement{
 	protected List<Attachement> attachements;
 	protected List<Binding> bindings;
 	protected Collection<InterfaceConfiguration> interfaces;
+	
+	public void envoyer(Object o) {
+		
+	}
+	
+	public void recevoir(Object o) {
+		
+	}
 }
