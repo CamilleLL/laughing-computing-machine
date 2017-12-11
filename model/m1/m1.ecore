@@ -170,8 +170,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LienServeurConf"/>
   <eClassifiers xsi:type="ecore:EClass" name="BindingServeurConf" eSuperTypes="#//LienServeurConf"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BindingServeurConfRequis" eSuperTypes="#//BindingServeurConf"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BindingServeurConfFourni" eSuperTypes="#//BindingServeurConf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingServeurConfRequis" eSuperTypes="#//BindingServeurConf">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portconnexionrequis" eType="#//PortConnexionRequis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portconfrequis" eType="#//PortConfRequis"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingServeurConfFourni" eSuperTypes="#//BindingServeurConf">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portconnexionfourni" eType="#//PortConnexionFourni"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portconffourni" eType="#//PortConfFourni"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttachementServeurConf" eSuperTypes="#//LienServeurConf"/>
   <eClassifiers xsi:type="ecore:EClass" name="Attachement_Connexion_Connecteur1" eSuperTypes="#//AttachementServeurConf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portconnexionrequis" eType="#//PortConnexionRequis"/>
