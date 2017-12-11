@@ -209,7 +209,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="portdatabaserequis" eType="#//PortDatabaseRequis"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rolecdfourni" eType="#//RoleCDFourni"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Attachement_Connecteur_Database" eSuperTypes="#//AttachementServeurConf">
+  <eClassifiers xsi:type="ecore:EClass" name="Attachement_Connecteur_Database2" eSuperTypes="#//AttachementServeurConf">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rolecdrequis" eType="#//RoleCDRequis"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portdatabasefourni" eType="#//PortDatabaseFourni"/>
   </eClassifiers>
